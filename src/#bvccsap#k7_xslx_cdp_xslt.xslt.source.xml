@@ -1,0 +1,23 @@
+<?sap.transform simple?>
+<tt:transform xmlns:tt="http://www.sap.com/transformation-templates" xmlns="http://schemas.openxmlformats.org/officeDocument/2006/custom-properties" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:vt=
+"http://schemas.openxmlformats.org/officeDocument/2006/docPropsVTypes">
+
+  <tt:root name="CUSTOM_DOC_PROPS"/>
+
+  <tt:template>
+    <Properties tt:extensible="deep-static">
+
+      <tt:loop name="lines" ref=".CUSTOM_DOC_PROPS">
+        <property>
+          <tt:attribute name="fmtid" value-ref="$lines.FMTID"/>
+          <tt:attribute name="pid" value-ref="$lines.PID"/>
+          <tt:attribute name="name" value-ref="$lines.PROP_NAME"/>
+          <vt:lpwstr>
+            <tt:value ref="$lines.PROP_VALUE"/>
+          </vt:lpwstr>
+        </property>
+      </tt:loop>
+    </Properties>
+  </tt:template>
+
+</tt:transform>

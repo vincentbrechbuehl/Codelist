@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>/BVCCSAP/K7_MESSAGEIDDESC_DE</ROLLNAME>
+    <DDLANGUAGE>D</DDLANGUAGE>
+    <DOMNAME>/BVCCSAP/K7_ID_DESC</DOMNAME>
+    <HEADLEN>50</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>20</SCRLEN2>
+    <SCRLEN3>40</SCRLEN3>
+    <DDTEXT>Meldungsbezeichung Deustch</DDTEXT>
+    <REPTEXT>Meldungsbezeichung DE</REPTEXT>
+    <SCRTEXT_S>MeldBezDE</SCRTEXT_S>
+    <SCRTEXT_M>Meldungsbez. DE</SCRTEXT_M>
+    <SCRTEXT_L>Meldungsbezeichung DE</SCRTEXT_L>
+    <DTELMASTER>D</DTELMASTER>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>

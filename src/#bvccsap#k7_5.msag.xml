@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>/BVCCSAP/K7_5</ARBGB>
+    <MASTERLANG>D</MASTERLANG>
+    <STEXT>Nachrichten für Codelistenverwaltung</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>Die Codeliste wurde erfolgreich gespeichert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Die Codeliste konnte aufgrund von Fehlern nicht gespeichert werden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>Fehler beim Parsing des XML.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>Die XML Datei kann nicht geladen werden. Das XML-Tag &lt;&amp;1&gt; fehlt.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>013</MSGNR>
+     <TEXT>Technischer Fehler: &amp;1.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>014</MSGNR>
+     <TEXT>Die Inputstruktur des Excel ist fehlerhaft.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>015</MSGNR>
+     <TEXT>InfoCarrier Id: &apos;&amp;1&apos; ist mehrfach vorhanden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>016</MSGNR>
+     <TEXT>Formularkategorie: &apos;&amp;1&apos; ist nicht definiert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>017</MSGNR>
+     <TEXT>Fachdaten Kontext: &apos;&amp;1&apos; ist nicht definiert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>018</MSGNR>
+     <TEXT>Der Codelistentyp &apos;&amp;1&apos; ist nicht definiert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>019</MSGNR>
+     <TEXT>Der Code &amp;1-&apos;&amp;2&apos; im System &apos;&amp;3&apos; ist nicht definiert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>020</MSGNR>
+     <TEXT>Der Codewert des Code &amp;1-&apos;&amp;2&apos; im System &apos;&amp;3&apos; ist leer.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>021</MSGNR>
+     <TEXT>Der Code &amp;1 existiert bereits im System &apos;&amp;2&apos;.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>022</MSGNR>
+     <TEXT>&amp;1 &lt;&amp;2&gt; existiert bereits und kann nicht eingefügt werden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>023</MSGNR>
+     <TEXT>&amp;1 &lt;&amp;2&gt; existiert nicht und kann nicht mutiert oder gelöscht werden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>024</MSGNR>
+     <TEXT>Kein &amp;1 Datei vorhanden!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>025</MSGNR>
+     <TEXT>Fehler beim Mutieren eines Eintrages aus &amp;1.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>026</MSGNR>
+     <TEXT>Fehler beim Einfügen eines neuen Eintrages in &amp;1.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>027</MSGNR>
+     <TEXT>Fehler beim Lesen eines Eintrages aus &amp;1.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>028</MSGNR>
+     <TEXT>Fehler beim Löschen eines Eintrages aus &amp;1.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>029</MSGNR>
+     <TEXT>MessageId: &apos;&amp;1&apos; ist mehrfach vorhanden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>030</MSGNR>
+     <TEXT>Für die Message ID &amp;1 ist das System &apos;&amp;2&apos; nicht definiert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>031</MSGNR>
+     <TEXT>Für die Message ID &amp;1 ist der Service &apos;&amp;2&apos; nicht definiert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>032</MSGNR>
+     <TEXT>Für den Code &amp;1 ist das System &apos;&amp;2&apos; nicht definiert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>100</MSGNR>
+     <TEXT>Keine Daten für das Publizieren nach E2 vorhanden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>101</MSGNR>
+     <TEXT>Die Daten der Codelisten wurden erfolgreich publiziert.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>102</MSGNR>
+     <TEXT>Der Business Case &amp;1 ist für das Publizieren unbekannt.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>103</MSGNR>
+     <TEXT>Keine XML Daten für den Payload für das Publizieren nach E2 vorhanden.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>150</MSGNR>
+     <TEXT>Kein Auftrag / Aufgabe gewählt</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>151</MSGNR>
+     <TEXT>Keine Aufgabe zum Auftrag &quot;&amp;1&quot; gefunden</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>152</MSGNR>
+     <TEXT>Transport &quot;&amp;1&quot; existiert nicht, oder kann nicht gelesen werden</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>153</MSGNR>
+     <TEXT>Es wurde kein Transport selektiert</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>D</SPRSL>
+     <ARBGB>/BVCCSAP/K7_5</ARBGB>
+     <MSGNR>154</MSGNR>
+     <TEXT>Interner Fehler beim Schreiben des Transports</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

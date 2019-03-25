@@ -1,0 +1,101 @@
+<?sap.transform simple?>
+<tt:transform xmlns:tt="http://www.sap.com/transformation-templates" xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">
+
+  <tt:root name="param"/>
+
+  <tt:template>
+    <worksheet>
+
+      <dimension>
+        <tt:attribute name="ref" value-ref="param.dim"/>
+      </dimension>
+
+      <sheetViews>
+        <sheetView tabSelected="1" workbookViewId="0">
+          <selection activeCell="A1" sqref="A1"/>
+        </sheetView>
+      </sheetViews>
+
+      <sheetFormatPr>
+        <tt:attribute name="defaultRowHeight" value-ref="param.defaultRowHeight"/>
+      </sheetFormatPr>
+
+
+      <cols>
+        <tt:loop name="col" ref="param.t_cols">
+          <tt:s-cond check="not-initial($col.bestFit)">
+            <col>
+              <tt:attribute name="min" value-ref="$col.min"/>
+              <tt:attribute name="max" value-ref="$col.max"/>
+              <tt:attribute name="bestFit" value-ref="$col.bestFit"/>
+              <tt:attribute name="width" value-ref="$col.width"/>
+              <tt:attribute name="customWidth">1</tt:attribute>
+            </col>
+          </tt:s-cond>
+        </tt:loop>
+      </cols>
+
+      <sheetData>
+        <!-- body section -->
+
+        <tt:loop name="body_row" ref="param.t_body_rows">
+          <row>
+            <tt:attribute name="r" value-ref="$body_row.position"/>
+            <tt:attribute name="spans" value-ref="$body_row.spans"/>
+            <tt:s-cond check="not-initial($body_row.height)">
+              <tt:attribute name="ht" value-ref="$body_row.height"/>
+              <tt:attribute name="customHeight">1</tt:attribute>
+            </tt:s-cond>
+            <tt:s-cond check="$body_row.outlinelevel &gt; 0">
+              <tt:attribute name="outlineLevel" value-ref="$body_row.outlinelevel"/>
+            </tt:s-cond>
+            <tt:s-cond check="not-initial($body_row.hidden)">
+              <tt:attribute name="hidden" value-ref="$body_row.hidden"/>
+            </tt:s-cond>
+
+            <tt:loop name="body_cell" ref="$body_row.t_cells">
+              <c>
+                <tt:attribute name="r" value-ref="$body_cell.position"/>
+                <tt:s-cond check="not-initial($body_cell.style)">
+                  <tt:attribute name="s" value-ref="$body_cell.style"/>
+                </tt:s-cond>
+                <tt:s-cond check="not-initial($body_cell.sharedstring)">
+                  <tt:attribute name="t" value-ref="$body_cell.sharedstring"/>
+                  <v>
+                    <tt:value ref="$body_cell.index"/>
+                  </v>
+                </tt:s-cond>
+                <tt:s-cond check="initial($body_cell.sharedstring) and not-initial($body_cell.value)">
+                  <v>
+                    <tt:value ref="$body_cell.value"/>
+                  </v>
+                </tt:s-cond>
+              </c>
+            </tt:loop>
+          </row>
+        </tt:loop>
+      </sheetData>
+
+      <tt:s-cond check="not-initial(param.t_merged_cells)">
+        <mergeCells>
+          <tt:attribute name="count" value-ref="param.merged_cells_count"/>
+          <tt:loop name="mergedCells" ref="param.t_merged_cells">
+            <mergeCell>
+              <tt:attribute name="ref" value-ref="$mergedCells.ref"/>
+            </mergeCell>
+          </tt:loop>
+        </mergeCells>
+      </tt:s-cond>
+
+      <pageMargins bottom="1" footer="0.5" header="0.5" left="0.75" right="0.75" top="1"/>
+      <headerFooter alignWithMargins="0"/>
+
+      <tt:s-cond check="not-initial(param.drawing_id)">
+        <drawing>
+          <tt:attribute name="r:id" value-ref="param.drawing_id"/>
+        </drawing>
+      </tt:s-cond>
+    </worksheet>
+  </tt:template>
+
+</tt:transform>

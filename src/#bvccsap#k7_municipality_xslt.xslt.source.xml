@@ -1,0 +1,45 @@
+<xsl:transform version="1.0"
+              xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+              xmlns:sap="http://www.sap.com/sapxsl"
+              xmlns:asx="http://www.sap.com/abapxml"
+              exclude-result-prefixes="asx">
+
+  <xsl:strip-space elements="*"/>
+  <xsl:output encoding="utf-8" indent="no" omit-xml-declaration="yes"/>
+  <xsl:template match="/asx:abap/asx:values/MUNICIPALITIES">
+    <HistoryMunicipalityIns_batch_req xmlns="http://ws.wso2.org/dataservice">
+      <xsl:for-each select="*">
+        <HistoryMunicipalityIns>
+          <historyMunicipalityId><xsl:value-of select="HISTORYMUNICIPALITYID"/></historyMunicipalityId>
+          <districtHistId><xsl:value-of select="DISTRICTHISTID"/></districtHistId>
+          <cantonAbbreviation><xsl:value-of select="CANTONABBREVIATION"/></cantonAbbreviation>
+          <municipalityId><xsl:value-of select="MUNICIPALITYID"/></municipalityId>
+          <municipalityLongName><xsl:value-of select="MUNICIPALITYLONGNAME"/></municipalityLongName>
+          <municipalityShortName><xsl:value-of select="MUNICIPALITYSHORTNAME"/></municipalityShortName>
+          <municipalityEntryMode><xsl:value-of select="MUNICIPALITYENTRYMODE"/></municipalityEntryMode>
+          <municipalityStatus><xsl:value-of select="MUNICIPALITYSTATUS"/></municipalityStatus>
+          <municipalityAdmissionNumber><xsl:value-of select="MUNICIPALITYADMISSIONNUMBER"/></municipalityAdmissionNumber>
+          <municipalityAdmissionMode><xsl:value-of select="MUNICIPALITYADMISSIONMODE"/></municipalityAdmissionMode>
+          <xsl:variable name="AdmissionDate" select="concat(substring(MUNICIPALITYADMISSIONDATE,1,4),substring(MUNICIPALITYADMISSIONDATE,5,3),substring(MUNICIPALITYADMISSIONDATE,8,3))"/>
+          <municipalityAdmissionDate><xsl:value-of select="$AdmissionDate"/></municipalityAdmissionDate>
+          <xsl:variable name="AbolitionDate" select="concat(substring(MUNICIPALITYABOLITIONDATE,1,4),substring(MUNICIPALITYABOLITIONDATE,5,3),substring(MUNICIPALITYABOLITIONDATE,8,3))"/>
+          <xsl:choose>
+            <xsl:when test="MUNICIPALITYABOLITIONDATE = '0000-00-00'">
+             <municipalityAbolitionNumber></municipalityAbolitionNumber>
+             <municipalityAbolitionMode></municipalityAbolitionMode>
+             <municipalityAbolitionDate></municipalityAbolitionDate>
+            </xsl:when>
+            <xsl:otherwise>
+              <municipalityAbolitionNumber><xsl:value-of select="MUNICIPALITYABOLITIONNUMBER"/></municipalityAbolitionNumber>
+              <municipalityAbolitionMode><xsl:value-of select="MUNICIPALITYABOLITIONMODE"/></municipalityAbolitionMode>
+              <municipalityAbolitionDate><xsl:value-of select="$AbolitionDate"/></municipalityAbolitionDate>
+            </xsl:otherwise>
+          </xsl:choose>
+          <xsl:variable name="DateOfChange" select="concat(substring(MUNICIPALITYDATEOFCHANGE,1,4),substring(MUNICIPALITYDATEOFCHANGE,5,3),substring(MUNICIPALITYDATEOFCHANGE,8,3))"/>
+          <municipalityAbolitionDate><xsl:value-of select="$DateOfChange"/></municipalityAbolitionDate>
+        </HistoryMunicipalityIns>
+      </xsl:for-each>
+    </HistoryMunicipalityIns_batch_req>
+  </xsl:template>
+
+</xsl:transform>

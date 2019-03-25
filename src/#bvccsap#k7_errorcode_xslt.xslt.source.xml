@@ -1,0 +1,41 @@
+<xsl:transform xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:sap="http://www.sap.com/sapxsl" xmlns:asx="http://www.sap.com/abapxml" exclude-result-prefixes="asx" version="1.0">
+
+  <xsl:strip-space elements="*"/>
+  <xsl:output encoding="utf-8" indent="no" omit-xml-declaration="yes"/>
+  <xsl:template match="/asx:abap/asx:values/ERROR_CODE">
+    <ErrCodeIns_batch_req xmlns="http://ws.wso2.org/dataservice">
+      <xsl:for-each select="*">
+        <ErrCodeIns>
+          <SYS>
+            <xsl:value-of select="SYSTEMID"/>
+          </SYS>
+          <S_ID>
+            <xsl:value-of select="SERVICEID"/>
+          </S_ID>
+          <S_BEZ>
+            <xsl:value-of select="SERVICEIDDESC"/>
+          </S_BEZ>
+          <M_ID>
+            <xsl:value-of select="MESSAGEID"/>
+          </M_ID>
+          <M_ID_F>
+            <xsl:value-of select="MESSAGEID_FULL"/>
+          </M_ID_F>
+          <M_BEZ_DE>
+            <xsl:value-of select="MESSAGEIDDESC_DE"/>
+          </M_BEZ_DE>
+          <M_BEZ_FR>
+            <xsl:value-of select="MESSAGEIDDESC_FR"/>
+          </M_BEZ_FR>
+          <M_BEZ_IT>
+            <xsl:value-of select="MESSAGEIDDESC_IT"/>
+          </M_BEZ_IT>
+          <M_BEZ_EN>
+            <xsl:value-of select="MESSAGEIDDESC_EN"/>
+          </M_BEZ_EN>
+        </ErrCodeIns>
+      </xsl:for-each>
+    </ErrCodeIns_batch_req>
+  </xsl:template>
+
+</xsl:transform>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>/BVCCSAP/K7_VALID_FROM</ROLLNAME>
+    <DDLANGUAGE>D</DDLANGUAGE>
+    <DOMNAME>DATUM</DOMNAME>
+    <LOGFLAG>X</LOGFLAG>
+    <HEADLEN>10</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>20</SCRLEN3>
+    <DDTEXT>Datum gültig ab</DDTEXT>
+    <REPTEXT>Gültig ab</REPTEXT>
+    <SCRTEXT_S>Gültig ab</SCRTEXT_S>
+    <SCRTEXT_M>Gültig ab</SCRTEXT_M>
+    <SCRTEXT_L>Gültig ab</SCRTEXT_L>
+    <APPLCLASS>V</APPLCLASS>
+    <DTELMASTER>D</DTELMASTER>
+    <DEFFDNAME>VALID_FROM</DEFFDNAME>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>E</LANGU>
+    <LANGU>F</LANGU>
+    <LANGU>I</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DDTEXT>Valid-From Date</DDTEXT>
+     <REPTEXT>Valid From</REPTEXT>
+     <SCRTEXT_S>Valid From</SCRTEXT_S>
+     <SCRTEXT_M>Valid From</SCRTEXT_M>
+     <SCRTEXT_L>Valid From</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>F</DDLANGUAGE>
+     <DDTEXT>Date de début de validité</DDTEXT>
+     <REPTEXT>Déb.valid.</REPTEXT>
+     <SCRTEXT_S>Déb.valid.</SCRTEXT_S>
+     <SCRTEXT_M>Début validité</SCRTEXT_M>
+     <SCRTEXT_L>Début de validité</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>I</DDLANGUAGE>
+     <DDTEXT>Data inizio validità</DDTEXT>
+     <REPTEXT>In. val.</REPTEXT>
+     <SCRTEXT_S>In. val.</SCRTEXT_S>
+     <SCRTEXT_M>Inizio validità</SCRTEXT_M>
+     <SCRTEXT_L>Inizio validità</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

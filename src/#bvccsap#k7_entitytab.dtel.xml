@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>/BVCCSAP/K7_ENTITYTAB</ROLLNAME>
+    <DDLANGUAGE>D</DDLANGUAGE>
+    <DOMNAME>AS4TAB</DOMNAME>
+    <HEADLEN>30</HEADLEN>
+    <SCRLEN2>20</SCRLEN2>
+    <SCRLEN3>40</SCRLEN3>
+    <DDTEXT>Abweichende Wertetabelle</DDTEXT>
+    <REPTEXT>Abw. Wertetabelle</REPTEXT>
+    <SCRTEXT_M>Abw. Wertetabelle</SCRTEXT_M>
+    <SCRTEXT_L>Abweichende Wertetabelle</SCRTEXT_L>
+    <APPLCLASS>SDIC</APPLCLASS>
+    <AUTHCLASS>01</AUTHCLASS>
+    <DTELMASTER>D</DTELMASTER>
+    <SHLPNAME>DD_DBTB</SHLPNAME>
+    <SHLPFIELD>TABNAME</SHLPFIELD>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>E</LANGU>
+    <LANGU>F</LANGU>
+    <LANGU>I</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DDTEXT>Value table</DDTEXT>
+     <REPTEXT>Value table</REPTEXT>
+     <SCRTEXT_M>Value table</SCRTEXT_M>
+     <SCRTEXT_L>Value table</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>F</DDLANGUAGE>
+     <DDTEXT>Table des valeurs</DDTEXT>
+     <REPTEXT>Table des valeurs</REPTEXT>
+     <SCRTEXT_M>Table des valeurs</SCRTEXT_M>
+     <SCRTEXT_L>Table des valeurs</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>I</DDLANGUAGE>
+     <DDTEXT>Tabella valori</DDTEXT>
+     <REPTEXT>Tabella valori</REPTEXT>
+     <SCRTEXT_M>Tabella valori</SCRTEXT_M>
+     <SCRTEXT_L>Tabella valori</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>/BVCCSAP/CL_K7_TRANSPORT_HNDL</CLSNAME>
+    <VERSION>1</VERSION>
+    <LANGU>D</LANGU>
+    <DESCRIPT>Transport Handler</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>/BVCCSAP/CL_K7_TRANSPORT_HNDL</CLSNAME>
+     <CMPNAME>MS_ORDER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Transportsystem: Auftrag</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>/BVCCSAP/CL_K7_TRANSPORT_HNDL</CLSNAME>
+     <CMPNAME>MS_TASK</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Transportsystem: Aufgabe</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>/BVCCSAP/CL_K7_TRANSPORT_HNDL</CLSNAME>
+     <CMPNAME>MT_KEYLIST</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Transport: Schlüsselwerte zu Tabellen</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>/BVCCSAP/CL_K7_TRANSPORT_HNDL</CLSNAME>
+     <CMPNAME>MV_ORDER</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Auftrag/Aufgabe</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>/BVCCSAP/CL_K7_TRANSPORT_HNDL</CLSNAME>
+     <CMPNAME>MV_TASK</CMPNAME>
+     <LANGU>D</LANGU>
+     <DESCRIPT>Auftrag/Aufgabe</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

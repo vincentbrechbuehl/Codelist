@@ -1,0 +1,164 @@
+<?sap.transform simple?>
+<tt:transform xmlns:tt="http://www.sap.com/transformation-templates" xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">
+
+  <tt:root name="param"/>
+
+  <tt:template>
+
+    <styleSheet>
+      <!-- number formats -->
+      <numFmts>
+        <tt:attribute name="count" value-ref="param.numfmts_count"/>
+        <tt:loop name="fmt" ref="param.t_numfmts">
+          <numFmt>
+            <tt:attribute name="numFmtId" value-ref="$fmt.id"/>
+            <tt:attribute name="formatCode" value-ref="$fmt.code"/>
+          </numFmt>
+        </tt:loop>
+      </numFmts>
+
+      <!-- fonts -->
+      <fonts>
+        <tt:attribute name="count" value-ref="param.numfonts_count"/>
+        <tt:loop name="font" ref="param.t_fonts">
+          <font>
+            <tt:s-cond check="not-initial($font.bold)">
+              <b/>
+            </tt:s-cond>
+            <tt:s-cond check="not-initial($font.italic)">
+              <i/>
+            </tt:s-cond>
+            <tt:s-cond check="not-initial($font.underline)">
+              <u/>
+            </tt:s-cond>
+            <sz>
+              <tt:attribute name="val" value-ref="$font.size"/>
+            </sz>
+            <tt:s-cond check="not-initial($font.color_rgb)">
+              <color>
+                <tt:attribute name="rgb" value-ref="$font.color_rgb"/>
+              </color>
+            </tt:s-cond>
+            <name>
+              <tt:attribute name="val" value-ref="$font.name"/>
+            </name>
+          </font>
+        </tt:loop>
+      </fonts>
+
+      <!-- fills -->
+      <fills>
+        <tt:attribute name="count" value-ref="param.numfills_count"/>
+        <tt:loop name="fill" ref="param.t_fills">
+          <fill>
+            <tt:cond>
+              <patternFill>
+                <tt:attribute name="patternType" value-ref="$fill.patterntype"/>
+
+                <tt:s-cond check="not-initial($fill.fgcolor_rgb)">
+                  <fgColor>
+                    <tt:attribute name="rgb" value-ref="$fill.fgcolor_rgb"/>
+                  </fgColor>
+                </tt:s-cond>
+
+                <tt:s-cond check="$fill.bgcolor_indexed &gt; 0">
+                  <bgColor>
+                    <tt:attribute name="indexed" value-ref="$fill.bgcolor_indexed"/>
+                  </bgColor>
+                </tt:s-cond>
+
+              </patternFill>
+            </tt:cond>
+          </fill>
+        </tt:loop>
+      </fills>
+      <!-- borders -->
+
+      <borders>
+        <tt:attribute name="count" value-ref="param.numborders_count"/>
+        <tt:loop name="border" ref="param.t_borders">
+          <border>
+            <left>
+              <tt:s-cond check="not-initial($border.left_style)">
+                <tt:attribute name="style" value-ref="$border.left_style"/>
+                <tt:s-cond check="not-initial($border.left_color_rgb)">
+                  <color>
+                    <tt:attribute name="rgb" value-ref="$border.left_color_rgb"/>
+                  </color>
+                </tt:s-cond>
+              </tt:s-cond>
+            </left>
+
+            <right>
+              <tt:s-cond check="not-initial($border.right_style)">
+                <tt:attribute name="style" value-ref="$border.right_style"/>
+                <tt:s-cond check="not-initial($border.right_color_rgb)">
+                  <color>
+                    <tt:attribute name="rgb" value-ref="$border.right_color_rgb"/>
+                  </color>
+                </tt:s-cond>
+              </tt:s-cond>
+            </right>
+
+            <top>
+              <tt:s-cond check="not-initial($border.top_style)">
+                <tt:attribute name="style" value-ref="$border.top_style"/>
+                <tt:s-cond check="not-initial($border.top_color_rgb)">
+                  <color>
+                    <tt:attribute name="rgb" value-ref="$border.top_color_rgb"/>
+                  </color>
+                </tt:s-cond>
+              </tt:s-cond>
+            </top>
+
+            <bottom>
+              <tt:s-cond check="not-initial($border.bottom_style)">
+                <tt:attribute name="style" value-ref="$border.bottom_style"/>
+                <tt:s-cond check="not-initial($border.bottom_color_rgb)">
+                  <color>
+                    <tt:attribute name="rgb" value-ref="$border.bottom_color_rgb"/>
+                  </color>
+                </tt:s-cond>
+              </tt:s-cond>
+            </bottom>
+            <diagonal/>
+          </border>
+        </tt:loop>
+      </borders>
+
+
+      <cellStyleXfs count="1">
+        <xf borderId="0" fillId="0" fontId="0" numFmtId="0"/>
+      </cellStyleXfs>
+      <cellXfs>
+        <tt:attribute name="count" value-ref="param.cellxfs_count"/>
+        <tt:loop name="xf" ref="param.t_cellxfs">
+          <xf>
+            <tt:attribute name="numFmtId" value-ref="$xf.numfmtid"/>
+            <tt:attribute name="fontId" value-ref="$xf.fontid"/>
+            <tt:attribute name="fillId" value-ref="$xf.fillid"/>
+            <tt:attribute name="borderId" value-ref="$xf.borderid"/>
+            <tt:attribute name="xfId" value-ref="$xf.xfid"/>
+            <tt:s-cond check="$xf.fillid &gt; 0">
+              <tt:attribute name="applyFill">1</tt:attribute>
+            </tt:s-cond>
+            <tt:s-cond check="$xf.borderid &gt; 0">
+              <tt:attribute name="applyBorder">1</tt:attribute>
+            </tt:s-cond>
+            <tt:s-cond check="$xf.allignment.text_rotation &gt; 0">
+              <tt:attribute name="applyAlignment">1</tt:attribute>
+              <alignment>
+                <tt:attribute name="textRotation" value-ref="$xf.allignment.text_rotation"/>
+              </alignment>
+            </tt:s-cond>
+          </xf>
+        </tt:loop>
+      </cellXfs>
+      <cellStyles count="1">
+        <cellStyle builtinId="0" name="Normal" xfId="0"/>
+      </cellStyles>
+      <dxfs count="0"/>
+      <tableStyles count="0" defaultPivotStyle="PivotStyleLight16" defaultTableStyle="TableStyleMedium9"/>
+    </styleSheet>
+  </tt:template>
+</tt:transform>

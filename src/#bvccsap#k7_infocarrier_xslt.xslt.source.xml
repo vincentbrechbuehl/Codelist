@@ -1,0 +1,50 @@
+<xsl:transform version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+xmlns:sap="http://www.sap.com/sapxsl"
+xmlns:asx="http://www.sap.com/abapxml"
+exclude-result-prefixes="asx">
+
+  <xsl:strip-space elements="*"/>
+  <xsl:output encoding="utf-8" indent="no" omit-xml-declaration="yes"/>
+  <xsl:template match="/asx:abap/asx:values/INFO_CARRIER">
+    <InfoCarrierIdIns_batch_req xmlns="http://ws.wso2.org/dataservice">
+      <xsl:for-each select="*">
+        <InfoCarrierIdIns>
+          <ID><xsl:value-of select="INFO_CARRIER_ID"/></ID>
+          <FORM_ID><xsl:value-of select="FORM_ID"/></FORM_ID>
+          <FORMULAR_NUMMER><xsl:value-of select="FORMULAR_NR"/></FORMULAR_NUMMER>
+          <BEZEICHNUNG_DE><xsl:value-of select="FORMULAR_DESC_DE"/></BEZEICHNUNG_DE>
+          <BEZEICHNUNG_FR><xsl:value-of select="FORMULAR_DESC_FR"/></BEZEICHNUNG_FR>
+          <BEZEICHNUNG_IT><xsl:value-of select="FORMULAR_DESC_IT"/></BEZEICHNUNG_IT>
+          <SPRACHE><xsl:value-of select="FORMULAR_LANGUAGES"/></SPRACHE>
+          <xsl:variable name="date_from" select="concat(substring(VALID_FROM,1,4),substring(VALID_FROM,5,3),substring(VALID_FROM,8,3),'T00:00:00')"/>
+          <VALID_FROM><xsl:value-of select="$date_from"/></VALID_FROM>
+          <xsl:variable name="date_to"   select="concat(substring(VALID_TO,1,4),substring(VALID_TO,5,3),substring(VALID_TO,8,3),'T00:00:00')"/>
+          <VALID_TO><xsl:value-of select="$date_to"/></VALID_TO>
+          <BEREICH><xsl:value-of select="APPLICATION_SCOPE"/></BEREICH>
+          <GESCHAEFTSPROZESS_TYP><xsl:value-of select="BUS_PROCESS_ID"/></GESCHAEFTSPROZESS_TYP>
+          <xsl:choose>
+            <xsl:when test="BUS_DATA_CONTEXT = ''">
+              <FACHDATEN_KONTEXT>NULL</FACHDATEN_KONTEXT>
+            </xsl:when>
+            <xsl:otherwise>
+              <FACHDATEN_KONTEXT><xsl:value-of select="BUS_DATA_CONTEXT"/></FACHDATEN_KONTEXT>
+            </xsl:otherwise>
+          </xsl:choose>
+          <xsl:choose>
+            <xsl:when test="SAP_ACC_DOCUMENT = ''">
+              <SAP_BUCHUNGSBELEG>0</SAP_BUCHUNGSBELEG>
+            </xsl:when>
+            <xsl:otherwise>
+              <SAP_BUCHUNGSBELEG>1</SAP_BUCHUNGSBELEG>
+            </xsl:otherwise>
+          </xsl:choose>
+          <RECEIVER_APP_IDS><xsl:value-of select="RECEIVER_APP_ID"/></RECEIVER_APP_IDS>
+          <FN_SOLUTION><xsl:value-of select="FILENET_SOLUTION"/></FN_SOLUTION>
+          <FN_REPOSITORY><xsl:value-of select="FILENET_REPOSITORY"/></FN_REPOSITORY>
+        </InfoCarrierIdIns>
+      </xsl:for-each>
+    </InfoCarrierIdIns_batch_req>
+  </xsl:template>
+
+</xsl:transform>

@@ -1,0 +1,63 @@
+<xsl:transform xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+               xmlns:sap="http://www.sap.com/sapxsl"
+               xmlns:asx="http://www.sap.com/abapxml"
+               exclude-result-prefixes="asx"
+               version="1.0">
+
+  <xsl:strip-space elements="*"/>
+  <xsl:output encoding="utf-8" indent="no" omit-xml-declaration="yes"/>
+  <xsl:template match="/asx:abap/asx:values/CODEID">
+    <StdCodeIns_batch_req xmlns="http://ws.wso2.org/dataservice">
+      <xsl:for-each select="*">
+        <xsl:variable name="systemid" select="SYSTEMID"/>
+        <xsl:variable name="codeid" select="CODEID"/>
+        <xsl:variable name="codeiddesc" select="CODEIDDESC"/>
+
+        <xsl:variable name="codeidvalues" select="CODEIDVALUES[1]/*"/>
+        <xsl:for-each select="$codeidvalues">
+          <StdCodeIns>
+            <SYS>
+              <xsl:value-of select="$systemid"/>
+            </SYS>
+            <ID>
+              <xsl:value-of select="$codeid"/>
+            </ID>
+            <BEZ>
+              <xsl:value-of select="$codeiddesc"/>
+            </BEZ>
+            <VAL_ID>
+              <xsl:value-of select="CODEIDVALUE"/>
+            </VAL_ID>
+            <xsl:variable name="codeidvaluedesc" select="CODEIDVALUEDESC[1]/*"/>
+            <xsl:for-each select="$codeidvaluedesc">
+              <xsl:choose>
+                <xsl:when test="SPRAS = 'D'">
+                  <BEZ_DE>
+                    <xsl:value-of select="CODEVALUEIDDESC"/>
+                  </BEZ_DE>
+                </xsl:when>
+                <xsl:when test="SPRAS = 'F'">
+                  <BEZ_FR>
+                    <xsl:value-of select="CODEVALUEIDDESC"/>
+                  </BEZ_FR>
+                </xsl:when>
+                <xsl:when test="SPRAS = 'I'">
+                  <BEZ_IT>
+                    <xsl:value-of select="CODEVALUEIDDESC"/>
+                  </BEZ_IT>
+                </xsl:when>
+                <xsl:when test="SPRAS = 'E'">
+                  <BEZ_EN>
+                    <xsl:value-of select="CODEVALUEIDDESC"/>
+                  </BEZ_EN>
+                </xsl:when>
+              </xsl:choose>
+            </xsl:for-each>
+
+          </StdCodeIns>
+        </xsl:for-each>
+      </xsl:for-each>
+    </StdCodeIns_batch_req>
+  </xsl:template>
+
+</xsl:transform>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>/BVCCSAP/K7_IUD</ROLLNAME>
+    <DDLANGUAGE>D</DDLANGUAGE>
+    <DOMNAME>/BVCCSAP/K7_IUD</DOMNAME>
+    <HEADLEN>55</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>20</SCRLEN3>
+    <DDTEXT>Insert/Update/Delete</DDTEXT>
+    <REPTEXT>Insert/Update/Delete</REPTEXT>
+    <SCRTEXT_S>IUD</SCRTEXT_S>
+    <SCRTEXT_M>IUD</SCRTEXT_M>
+    <SCRTEXT_L>Insert/Update/Delete</SCRTEXT_L>
+    <DTELMASTER>D</DTELMASTER>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>E</LANGU>
+    <LANGU>F</LANGU>
+    <LANGU>I</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DDTEXT>Insert/Update/Delete</DDTEXT>
+     <REPTEXT>Insert/Update/Delete</REPTEXT>
+     <SCRTEXT_S>I/U/D</SCRTEXT_S>
+     <SCRTEXT_M>Ins/Upd/Del</SCRTEXT_M>
+     <SCRTEXT_L>Insert/Update/Delete</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>F</DDLANGUAGE>
+     <DDTEXT>Insérer/mettre à jour/supprimer</DDTEXT>
+     <REPTEXT>Insérer/mettre à jour/supprimer</REPTEXT>
+     <SCRTEXT_S>Ins./MJ/S.</SCRTEXT_S>
+     <SCRTEXT_M>Ins./MAJ/suppr.</SCRTEXT_M>
+     <SCRTEXT_L>Ins./mettre jr/supp.</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>I</DDLANGUAGE>
+     <DDTEXT>Inserire/Aggiornare/Cancellare</DDTEXT>
+     <REPTEXT>Inserire/Aggiornare/Cancellare</REPTEXT>
+     <SCRTEXT_S>I/A/C</SCRTEXT_S>
+     <SCRTEXT_M>Ins/Agg/Canc</SCRTEXT_M>
+     <SCRTEXT_L>Ins/Agg/Canc</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
